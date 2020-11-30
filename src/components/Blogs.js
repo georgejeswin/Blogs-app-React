@@ -23,14 +23,20 @@ const Blogs = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [searchInput]);
+  }, [searchInput, URL, dispatch]);
 
   return (
     <div className="blog__page">
       {loading ? <h1 className="loading">Loading...</h1> : ""}
       <div className="blogs">
         {blogs?.articles?.map((blog) => (
-          <a key={blog.url} href={blog.url} target="_blank" className="blog">
+          <a
+            key={blog.url}
+            rel="noopener noreferrer"
+            href={blog.url}
+            target="_blank"
+            className="blog"
+          >
             <img src={blog.image} alt="" />
             <div>
               <h3 className="sourceName">
@@ -42,7 +48,7 @@ const Blogs = () => {
             </div>
           </a>
         ))}
-        {blogs?.totalArticles == 0 && (
+        {blogs?.totalArticles === 0 && (
           <h1 className="no__blogs">
             No blogs Available . Search Something Else
           </h1>

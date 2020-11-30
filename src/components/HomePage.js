@@ -21,7 +21,11 @@ const Home = () => {
     <div className="home__page" style={{ display: isSignedIn ? "none" : "" }}>
       {!isSignedIn ? (
         <div className="login__message">
-          <h2>📘</h2>
+          <h2>
+            <span role="img" aria-label="book">
+              📘
+            </span>
+          </h2>
           <h1>A Readers Favorite Place!!</h1>
           <p>
             We provide high quality online resources for you. Sign in and start
