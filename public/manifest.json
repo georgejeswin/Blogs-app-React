@@ -1,0 +1,21 @@
+{
+  "name": "News Blog",
+  "short_name": "News Blog",
+  "theme_color": "#000",
+  "background_color": "#000",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "image/192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "image/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
