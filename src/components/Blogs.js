@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Blogs.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUserInput, setBlogData } from "../features/userSlice";
+import Spinner from "./Spinner";
 
 const Blogs = () => {
   const searchInput = useSelector(selectUserInput);
@@ -27,7 +28,13 @@ const Blogs = () => {
 
   return (
     <div className="blog__page">
-      {loading ? <h1 className="loading">Loading...</h1> : ""}
+      {loading ? (
+        <h1 className="loading">
+          <Spinner />
+        </h1>
+      ) : (
+        ""
+      )}
       <div className="blogs">
         {blogs?.articles?.map((blog) => (
           <a

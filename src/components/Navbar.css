@@ -32,7 +32,7 @@
 
 .user {
   cursor: pointer;
-  border: 1px solid rgb(0, 255, 234);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .signedIn {
